@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achievements �?" FRACTURE FTC Team 37687</title>
+  <meta name="description" content="Fracture FTC Team 37687 awards and recognitions. New awards are added as they are verified." />
+  <meta name="theme-color" content="#050506" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050506'/%3E%3Cpath d='M8 8h16v16H8z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body data-page="achievements">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header"></header>
+
+  <div class="page">
+    <main id="main" class="main-content">
+
+      <!-- Page header -->
+      <section class="section section--compact grid-bg" id="achievements-hero">
+        <div class="container">
+          <div class="section-head section-head--left reveal reveal--up">
+            <div class="section-head__label">
+              <span>01 / ACHIEVEMENTS</span>
+              <span>AWARDS</span>
+            </div>
+            <div class="section-head__main">
+              <h2 class="section-title">Achievements</h2>
+            </div>
+            <div class="section-head__aside">
+              <p>Awards and recognitions earned by Fracture. New results are added here as they are verified. This page lists awards only.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section class="section" id="achievements-list">
+        <div class="container">
+          <div class="award-grid" id="award-list">
+            <!-- Rendered by script -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Render awards from centralized content file */
+    (function () {
+      const CONTENT = window.FRACTURE_CONTENT || {};
+      const achievements = CONTENT.achievements || {};
+      const container = document.getElementById("award-list");
+      if (!container) return;
+
+      const awards = achievements.awards || [];
+
+      if (awards.length) {
+        container.innerHTML = awards.map((award) => `
+          <div class="award-card reveal reveal--up">
+            <div class="award__title">${award.title}</div>
+            <div class="award__meta">
+              <span>${award.event || "Event to be confirmed"}</span>
+              <span>${award.season || "Season to be confirmed"}</span>
+            </div>
+            ${award.detail ? `<p class="award__body">${award.detail}</p>` : ""}
+          </div>
+        `).join("");
+      } else {
+        container.innerHTML = `
+          <div class="no-awards reveal reveal--up">
+            No awards have been added yet. Verified awards will be listed here as they are earned.
+          </div>
+        `;
+      }
+    })();
+  </script>
+</body>
+</html>

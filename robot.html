@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Robot �?" FRACTURE FTC Team 37687</title>
+  <meta name="description" content="Fracture FTC Team 37687 robot showcase. Mechanical subsystems, design process, and technical specifications." />
+  <meta name="theme-color" content="#050506" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050506'/%3E%3Cpath d='M8 8h16v16H8z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body data-page="robot">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header"></header>
+
+  <div class="page">
+    <main id="main" class="main-content">
+
+      <!-- Page header -->
+      <section class="section section--compact grid-bg" id="robot-hero">
+        <div class="container">
+          <div class="section-head section-head--left reveal reveal--up">
+            <div class="section-head__label">
+              <span>01 / ROBOT</span>
+              <span>OUR BUILD</span>
+            </div>
+            <div class="section-head__main">
+              <h2 class="section-title">Our robot</h2>
+            </div>
+            <div class="section-head__aside">
+              <p>The current season&rsquo;s robot is in the design and prototyping phase. Technical details are added as the build progresses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction -->
+      <section class="section" id="robot-intro">
+        <div class="container">
+          <div class="split">
+            <div class="split__copy reveal reveal--left">
+              <h2 class="split__heading">Robot introduction</h2>
+              <p class="split__body">
+                Fracture&rsquo;s robot is designed and built by the team each FTC season. It combines mechanical subsystems, electrical wiring, and software to complete the game challenge. The current season&rsquo;s robot is in the design and prototyping phase.
+              </p>
+              <p class="split__body">
+                Subsystems, mechanisms, and specifications below are placeholders pending the season&rsquo;s design review. They will be replaced with real technical information as the robot is built.
+              </p>
+            </div>
+            <div class="split__visual reveal reveal--right">
+              <figure class="figure ratio-4-3">
+                <img
+                  src="assets/images/robot/hero-chassis.jpg"
+                  alt="Robot chassis"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="figure-caption">CHASSIS / REFERENCE</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="section section--compact" id="robot-gallery">
+        <div class="container">
+          <div class="section-head section-head--left reveal reveal--up">
+            <div class="section-head__label">
+              <span>01 / GALLERY</span>
+              <span>IMAGES &amp; CAD</span>
+            </div>
+            <div class="section-head__main">
+              <h2 class="section-title">Robot gallery</h2>
+            </div>
+          </div>
+
+          <div class="preview-row" id="robot-gallery-grid">
+            <!-- Rendered by script -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Subsystems -->
+      <section class="section" id="robot-subsystems">
+        <div class="container">
+          <div class="section-head section-head--left reveal reveal--up">
+            <div class="section-head__label">
+              <span>01 / SUBSYSTEMS</span>
+              <span>MECHANISMS</span>
+            </div>
+            <div class="section-head__main">
+              <h2 class="section-title">Mechanical components</h2>
+            </div>
+          </div>
+
+          <div id="subsystem-list">
+            <!-- Rendered by script -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Design process -->
+      <section class="section section--compact grid-bg" id="robot-process">
+        <div class="container">
+          <div class="section-head section-head--left reveal reveal--up">
+            <div class="section-head__label">
+              <span>01 / PROCESS</span>
+              <span>ITERATION</span>
+            </div>
+            <div class="section-head__main">
+              <h2 class="section-title">Design process</h2>
+            </div>
+          </div>
+
+          <div class="process-grid" id="process-list">
+            <!-- Rendered by script -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Specifications -->
+      <section class="section" id="robot-specs">
+        <div class="container">
+          <div class="section-head section-head--left reveal reveal--up">
+            <div class="section-head__label">
+              <span>01 / SPECIFICATIONS</span>
+              <span>TECHNICAL DATA</span>
+            </div>
+            <div class="section-head__main">
+              <h2 class="section-title">Specifications</h2>
+            </div>
+          </div>
+
+          <div class="card reveal reveal--up">
+            <table class="spec-table" id="spec-table">
+              <!-- Rendered by script -->
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Render robot page content from centralized content file */
+    (function () {
+      const CONTENT = window.FRACTURE_CONTENT || {};
+      const robot = CONTENT.robot || {};
+
+      // Gallery
+      const galleryGrid = document.getElementById("robot-gallery-grid");
+      if (galleryGrid && robot.gallery) {
+        galleryGrid.innerHTML = robot.gallery.map((item) => `
+          <div class="preview-item reveal reveal--up">
+            <div class="preview-item__figure">
+              <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async">
+            </div>
+            <div class="figure-caption">${item.caption}</div>
+          </div>
+        `).join("");
+      }
+
+      // Subsystems
+      const subsystemList = document.getElementById("subsystem-list");
+      if (subsystemList && robot.subsystems) {
+        subsystemList.innerHTML = robot.subsystems.map((s) => `
+          <div class="subsystem reveal reveal--up">
+            <div class="subsystem__copy">
+              <div class="subsystem__title">${s.title}</div>
+              <p class="subsystem__body">${s.body}</p>
+              <div class="subsystem__status subsystem__status--pending">
+                <span>STATUS</span>
+                <span>${s.status}</span>
+              </div>
+            </div>
+            <div class="subsystem__visual">
+              <div class="image-placeholder" style="height:160px; width:100%; border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center;">
+                <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--color-text-tertiary);">DIAGRAM / PLACEHOLDER</span>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      // Process steps
+      const processList = document.getElementById("process-list");
+      if (processList && robot.process) {
+        processList.innerHTML = robot.process.steps.map((step, i) => `
+          <div class="process-step reveal reveal--up" style="--i:${i}">
+            <div class="process-step__num">${i + 1}</div>
+            <div class="process-step__title">${step.title}</div>
+            <div class="process-step__body">${step.body}</div>
+          </div>
+        `).join("");
+      }
+
+      // Specifications
+      const specTable = document.getElementById("spec-table");
+      if (specTable && robot.specifications) {
+        specTable.innerHTML = `
+          <thead>
+            <tr><th>Item</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            ${robot.specifications.items.map((item) => `
+              <tr>
+                <td>${item.label}</td>
+                <td ${item.type === "badge-pending" ? 'class="badge-pending-td"' : ""}>
+                  ${item.type === "badge-pending"
+                    ? `<span class="badge" style="background:rgba(255,255,255,0.06); color:var(--color-text-tertiary); border:1px solid var(--color-border);">${item.value}</span>`
+                    : item.value}
+                </td>
+              </tr>
+            `).join("")}
+          </tbody>
+        `;
+      }
+    })();
+  </script>
+</body>
+</html>
